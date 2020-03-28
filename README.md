@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- `yarn` : Tải dependencies
+- `yarn start` : Khởi động project
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Icon: Dùng icon ở trang https://ionicons.com/
+- Dùng `styled-component`, Mỗi component sẽ gồm 1 file `.jsx`, một file `.styled.js`, và có thể `.data.js`, `.utils.js`,`.test.js`,...
+- Chia components theo "atomic architecture"
+  - `atoms`: Nhưng component "nguyên tử", tái sử dụng được
+  - `molecules`: Những component "phân tử", có thể được tạo thành từ component ở thư mục `atoms`
+  - `organisms`: Những component thành phần của một page, như một section của page,... Thư mục `organisms` gồm nhiều thư mục con, mỗi thư mục con gồm các component liên quan đến một page
+  - `pages`: Các page: HomePage, ContactPage, ShopPage, ProductPage, CartPage, LoginPage,...
+  - `templates`: Những component xuất hiện indepently với các trang trang, ví dụ như `header`, `footer`
+  - Component nào bỏ vào thư mục nào, hợp lý là được, không có một nguyên tắc strictly nào cả.
+- Các page để routing sẽ được thêm vào file `src/routes.js`, file có export sẵn component `Link`, `NavLink`, `useHistory`,... cho thuận tiện khi import. Vì thường dùng tới `routes` sẽ cần dùng những cái đi kèm đó luôn, import từ `routes.js` luôn đỡ phải import thêm 1 dòng từ `react-router-dom`.
+- Thư mục `redux` sẽ chia ra nhiều "miếng" (slices). Mỗi miếng sẽ gồm: `actions.js`, `reducer.js`, `types.js`, 'selectors.js`, và có thể `data.js`,... Khi truy xuất dữ liệu từ redux sẽ dùng `useSelector` + một selector từ `selectors.js`. Khi dispatch một action sẽ dùng `useDispatch` + một action từ `actions.js`,...
+- Git commit: Viết hoa chữ cái đầu, không có dâu chấm cuối câu.
+- Thư mục `src/styles` chưa các file config liên quan đến style. Có thể truy xuất ở các file `.styled.js`. Ví dụ `${(props) => props.theme.mixins.flexCenter};` sẽ import `flexCenter` từ file `mixins.js`.
