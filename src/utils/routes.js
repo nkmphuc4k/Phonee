@@ -8,8 +8,25 @@ export { Link, NavLink, StyledLink, useHistory };
 export default {
   home: {
     path: '/',
-    display: 'Trang chủ',
+    display: 'Home',
   },
+  shop: {
+    path: '/shop',
+    display: 'Shop',
+  },
+  contactUs: {
+    path: '/contact-us',
+    display: 'Contact Us',
+  },
+  login: {
+    path: '/login',
+    display: 'Login',
+  },
+  signUp: {
+    path: '/sign-up',
+    display: 'Sign Up',
+  },
+
   about: {
     path: '/about',
     display: 'Giới thiệu',

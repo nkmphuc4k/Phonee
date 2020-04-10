@@ -13,3 +13,12 @@ export const fw = {
   semiBold: 600,
   bold: 700,
 };
+
+export const trans = {
+  normal: '0.3s',
+  fast1: '0.25s',
+  fast2: '0.2s',
+  fast3: '0.15s',
+  fast4: '0.1s',
+  fast5: '0.05s',
+};
