@@ -28,7 +28,7 @@ function Header() {
         <LogoText>Phonee</LogoText>
       </LogoWrapper>
       <LoginWrapper to={routes.login.path}>
-        <ion-icon name="person-circle"></ion-icon>
+        <ion-icon name="person-circle" />
         <span>Log In</span>
       </LoginWrapper>
       <nav>
@@ -45,7 +45,7 @@ function Header() {
         </NavList>
       </nav>
       <CartWrapper>
-        <ion-icon name="cart-outline"></ion-icon>
+        <ion-icon name="cart-outline" />
         <span>(0)</span>
       </CartWrapper>
     </HeaderContainer>
