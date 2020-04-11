@@ -4,13 +4,12 @@ export default {
   fontPrimary: '"Montserrat", sans-serif',
   colorText: colors.greyDark1,
   background: colors.white,
-  backgroundSecondary: `linear-gradient(to right, ${colors.purple}, ${colors.blue})`,
+  backgroundSecondary: colors.greyBlue1,
 
   colorPrimary: colors.blue,
   colorPrimaryDarker1: colors.blueDarker1,
   colorPrimaryDarker2: colors.blueDarker2,
   colorPrimaryDarker3: colors.blueDarker3,
-  colorSecondary: colors.purple,
 
   transNormal: '0.2s',
   transSlow1: '0.3s',

@@ -25,7 +25,7 @@ export default createGlobalStyle`
     color: ${(props) => props.theme.styles.colorText};
     min-height: 100vh;
     font-family: ${(props) => props.theme.styles.fontPrimary};
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: ${(props) => props.theme.fw.normal};
     line-height: 1.5;
   }
