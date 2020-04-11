@@ -30,7 +30,8 @@ export const LogoText = styled.span`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 2.5rem;
+  left: 2rem;
+  font-style: italic;
 `;
 
 export const LoginWrapper = styled(Link)`

@@ -2,11 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   padding: 3rem 10%;
-  background: linear-gradient(
-    to right,
-    ${(p) => p.theme.styles.colorSecondary},
-    ${(p) => p.theme.styles.colorPrimary}
-  );
+  background: ${(p) => p.theme.styles.backgroundSecondary};
   color: ${(p) => p.theme.colors.white};
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;

@@ -4,7 +4,7 @@ export default {
   fontPrimary: '"Montserrat", sans-serif',
   colorText: colors.greyDark1,
   background: colors.white,
-  backgroundSecondary: colors.greyBlue1,
+  backgroundSecondary: `linear-gradient(to right, ${colors.purple}, ${colors.blue})`,
 
   colorPrimary: colors.blue,
   colorPrimaryDarker1: colors.blueDarker1,
