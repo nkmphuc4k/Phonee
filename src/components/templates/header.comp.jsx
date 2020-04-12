@@ -1,23 +1,16 @@
 import React from 'react';
 
-import HeaderTopBar from '../organisms/header/header-top-bar.comp';
-import HeaderLogo from '../organisms/header/header-logo.comp';
-import HeaderNav from '../organisms/header/header-nav.comp';
-import SearchBar from '../organisms/header/search-bar.comp';
-
-import { useStickyHeader } from './header.hooks';
-import { HeaderContainer } from './header.styled';
+import routes from '../../utils/routes';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
-  const { isStuck, headerRef } = useStickyHeader();
 
   return (
-    <HeaderContainer isStuck={isStuck} ref={headerRef}>
-      <HeaderTopBar isHeaderStuck={isStuck} />
-      <HeaderLogo isHeaderStuck={isStuck} />
-      <HeaderNav isHeaderStuck={isStuck} />
-      <SearchBar isHeaderStuck={isStuck} />
-    </HeaderContainer>
+    <header>
+      <NavLink to={routes.product.path}>Go to Product Page</NavLink> <br/>
+      <NavLink to={routes.cart.path}>Go to Cart Page</NavLink> <br />
+      --- <br />
+    </header>
   );
 }
 

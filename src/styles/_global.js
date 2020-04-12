@@ -36,7 +36,6 @@ export default createGlobalStyle`
 
   a, a:link, a:visited {
     text-decoration: none;
-    color: inherit;
     outline: none;
   }
 
