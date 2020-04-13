@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routes from './utils/routes';
 
 import Header from './components/templates/header.comp';
@@ -13,6 +13,7 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Switch>
+        <Route path={routes.home.path} render={() => <Redirect to={routes.product.path} />} exact />
         <Route path={routes.product.path} component={ProductPage} exact />
         <Route path={routes.cart.path} component={CartPage} exact />
         <Route component={NotFoundPage} />
