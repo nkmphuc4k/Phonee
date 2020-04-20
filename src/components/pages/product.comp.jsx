@@ -1,14 +1,14 @@
-import React from 'react'
-import {ProductList} from '../atoms/ProductsList';
-import {ListBrand} from '../atoms/ListBrand';
+import React from 'react';
+import GridProducts from '../atoms/grid-products.comp';
+
+import { PageContaienr } from './product.styled';
 
 function Product() {
   return (
-    <div>
-<ListBrand/>
-<ProductList/>
-    </div>
-  )
+    <PageContaienr>
+      <GridProducts />
+    </PageContaienr>
+  );
 }
 
-export default Product
+export default Product;
