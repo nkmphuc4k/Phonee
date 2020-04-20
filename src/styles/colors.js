@@ -12,7 +12,7 @@ export default {
 
   greyBlue1: '#f2f5fa',
 
-  blue: '#b5e2ef',
+  blue: '#288ad6',
   blueDarker1: '#90cdde',
   blueDarker2: '#67c1d9',
   blueDarker3: '#57aabf',

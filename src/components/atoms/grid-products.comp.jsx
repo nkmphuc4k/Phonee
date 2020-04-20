@@ -1,13 +1,13 @@
 import React from 'react';
 import ProductPreview from './product-preview.comp';
-import DATA from './grid-products.data';
+import products from '../../mock-data/products';
 
 import { GridContainer } from './grid-products.styled';
 
 function GridProducts() {
   return (
     <GridContainer>
-      {DATA.slice(0, 20).map((product, id) => (
+      {products.slice(0, 20).map((product, id) => (
         <ProductPreview key={id} {...product} />
       ))}
     </GridContainer>

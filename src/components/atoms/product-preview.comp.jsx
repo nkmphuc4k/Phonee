@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import routes from '../../utils/routes';
 import { formatVnd } from '../../utils/helpers';
 
 import {
@@ -11,9 +12,9 @@ import {
   CrossPrice,
 } from './product-preview.styled';
 
-function ProductPreview({ name, price, crossPrice, image }) {
+function ProductPreview({ id, name, price, crossPrice, image }) {
   return (
-    <Container>
+    <Container to={`${routes.product.path}/${id}`}>
       <ImageContainer>
         <img src={image} alt={name} />
       </ImageContainer>
@@ -27,6 +28,7 @@ function ProductPreview({ name, price, crossPrice, image }) {
 }
 
 ProductPreview.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   crossPrice: PropTypes.number,
@@ -34,6 +36,7 @@ ProductPreview.propTypes = {
 };
 
 ProductPreview.defaultProps = {
+  id: 'product_1',
   name: 'iPhone 11 Pro 256GB',
   price: 34990000,
   crossPrice: 36990000,
