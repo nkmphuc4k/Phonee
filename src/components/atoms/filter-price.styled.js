@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  margin: 1.2em auto;
 `;
 
 export const Label = styled.label`
