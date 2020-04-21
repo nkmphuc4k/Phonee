@@ -8,12 +8,12 @@ export const selectCustomStyles = {
     '&:hover': {
       borderColor: '#aaa',
     },
-    minHeight: 0,
+    minHeight: 0, // (1)
   }),
 
   dropdownIndicator: (base) => ({
     ...base,
-    padding: 3,
+    padding: 3, // (2)
   }),
 
   container: (base) => ({
@@ -32,3 +32,5 @@ export const selectCustomStyles = {
     padding: 2,
   }),
 };
+
+// NOTE: To truncate the default padding of <Select/>, need (1) and (2) (Take me days to find out)
