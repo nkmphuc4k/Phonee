@@ -18,4 +18,5 @@ export default {
   blueDarker3: '#57aabf',
 
   red: '#e10c00',
+  redDarker1: '#c10017',
 };
