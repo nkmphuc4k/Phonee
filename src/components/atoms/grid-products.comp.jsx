@@ -7,8 +7,8 @@ import { GridContainer } from './grid-products.styled';
 function GridProducts() {
   return (
     <GridContainer>
-      {products.slice(0, 20).map((product, id) => (
-        <ProductPreview key={id} {...product} />
+      {products.slice(0, 20).map((product) => (
+        <ProductPreview key={product.id} {...product} />
       ))}
     </GridContainer>
   );

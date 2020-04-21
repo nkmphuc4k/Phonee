@@ -5,4 +5,5 @@ export const GridContainer = styled.div`
   background: ${(props) => props.theme.colors.greyLight1};
   grid-gap: 1px;
   border: 1px solid ${(props) => props.theme.colors.greyLight1};
+  margin: 3em auto;
 `;
