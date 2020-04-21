@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { priceFilters } from '../../redux/product-filter-sorting/data';
+import { selectPriceFilter } from '../../redux/product-filter-sorting/selectors';
+import { setPriceFilter } from '../../redux/product-filter-sorting/actions';
 
 import { Container, Label, FilterLabel } from './filter-price.styled';
 
-const FilterItem = (props) => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  return <FilterLabel isChecked={isChecked} onClick={() => setIsChecked(!isChecked)} {...props} />;
-};
-
 function FilterPrice() {
+  const curPriceFilter = useSelector(selectPriceFilter);
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <Label>Chọn mức giá:</Label>
-      <FilterItem>Dưới 2 triệu</FilterItem>
-      <FilterItem>Từ 2 - 4 triệu</FilterItem>
-      <FilterItem>Từ 4 - 7 triệu</FilterItem>
-      <FilterItem>Từ 7 - 13 triệu</FilterItem>
-      <FilterItem>Trên 13 triệu</FilterItem>
+
+      {priceFilters.map((priceFilter, index) => (
+        <FilterLabel
+          key={index}
+          isChecked={priceFilter === curPriceFilter}
+          onClick={() => dispatch(setPriceFilter(priceFilter))}
+        >
+          {priceFilter.label}
+        </FilterLabel>
+      ))}
     </Container>
   );
 }

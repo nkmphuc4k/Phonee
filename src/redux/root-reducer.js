@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import navigationReducer from './navigation/reducer';
+import productFilterSortingReducer from './product-filter-sorting/reducer';
 
 export default combineReducers({
-  navigation: navigationReducer,
+  productFilterSorting: productFilterSortingReducer,
 });

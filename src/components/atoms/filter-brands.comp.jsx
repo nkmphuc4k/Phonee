@@ -1,33 +1,29 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import brands from '../../mock-data/brands';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { brands } from '../../redux/product-filter-sorting/data';
+import { selectBrandsFiltered } from '../../redux/product-filter-sorting/selectors';
+import { toggleBrand } from '../../redux/product-filter-sorting/actions';
 
 import { Container, ImageContainer } from './filter-brands.styled';
 
-const FilterBrandItem = ({ id, name, image }) => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  return (
-    <ImageContainer title={name} isChecked={isChecked} onClick={() => setIsChecked(!isChecked)}>
-      <img src={image} alt={name} />
-    </ImageContainer>
-  );
-};
-
 function FilterBrands() {
+  const brandsToFilter = useSelector(selectBrandsFiltered);
+  const dispatch = useDispatch();
+
   return (
     <Container>
       {brands.map((brand) => (
-        <FilterBrandItem key={brand.id} {...brand} />
+        <ImageContainer
+          key={brand.id}
+          title={brand.name}
+          isChecked={brandsToFilter.includes(brand)}
+          onClick={() => dispatch(toggleBrand(brand))}
+        >
+          <img src={brand.image} alt={brand.name} />
+        </ImageContainer>
       ))}
     </Container>
   );
 }
-
-FilterBrandItem.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-};
 
 export default FilterBrands;
