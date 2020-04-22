@@ -18,3 +18,7 @@ export const toggleBrand = (payload) => ({
 export const removeAllFilters = () => ({
   type: types.REMOVE_ALL_FILTERS,
 });
+
+export const resetSorting = () => ({
+  type: types.RESET_SORTING,
+});

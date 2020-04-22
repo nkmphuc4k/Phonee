@@ -23,6 +23,8 @@ yarn start // Khởi động project
   - Khi dispatch một action sẽ dùng `useDispatch` + một action từ `actions.js`,...
   - Đọc thêm code mẫu để hiểu
 
+- Products data flow on `product page`: `All products (might from the server)` -> `Filter by brands` -> `Filter by price` -> `Sorting` -> `Paging` -> `Display`
+
 - Icon: Dùng icon ở trang https://ionicons.com/. File cdn để dùng icon đã được liên kết ở `public/index.html`, giờ chỉ cần dùng thôi. Tự search `ion-icon` trong project để xem cách dùng
 
 - Các page để routing sẽ được thêm vào file `src/routes.js` để tiện quản lý phòng trường hợp cần phát triển lên, sẽ có 1 nguồn thống nhất các routes

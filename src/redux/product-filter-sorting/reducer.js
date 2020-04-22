@@ -48,6 +48,13 @@ export default (state = initialState, { type, payload }) => {
       };
     }
 
+    case types.RESET_SORTING: {
+      return {
+        ...state,
+        sorting: sorting[0],
+      };
+    }
+
     default:
       return state;
   }

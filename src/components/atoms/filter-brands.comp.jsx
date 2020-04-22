@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { brands } from '../../redux/product-filter-sorting/data';
 import { selectBrandsFiltered } from '../../redux/product-filter-sorting/selectors';
 import { toggleBrand } from '../../redux/product-filter-sorting/actions';
+import brands from '../../mock-data/brands';
 
 import { Container, ImageContainer } from './filter-brands.styled';
 

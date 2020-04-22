@@ -37,6 +37,8 @@ export const Container = styled(Link)`
   background: white;
   padding: 2em 1em 1em;
   color: currentColor;
+  border: 1px solid ${(props) => props.theme.colors.greyLight1};
+  margin: -1px -1px 0 0;
 
   &:hover {
     color: currentColor;

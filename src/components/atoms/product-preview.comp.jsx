@@ -20,7 +20,7 @@ function ProductPreview({ id, name, price, crossPrice, image }) {
       </ImageContainer>
       <Name>{name}</Name>
       <PriceWrapper>
-        <Price>{formatVnd(price)}</Price>
+        <Price>{price ? formatVnd(price) : 'Hàng sắp về'}</Price>
         {crossPrice && <CrossPrice>{formatVnd(crossPrice)}</CrossPrice>}
       </PriceWrapper>
     </Container>

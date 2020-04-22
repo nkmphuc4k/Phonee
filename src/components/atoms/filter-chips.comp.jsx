@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { brands, priceFilters } from '../../redux/product-filter-sorting/data';
+import { priceFilters } from '../../redux/product-filter-sorting/data';
 import {
   selectPriceFilter,
   selectBrandsFiltered,
@@ -11,6 +11,7 @@ import {
   setPriceFilter,
   removeAllFilters,
 } from '../../redux/product-filter-sorting/actions';
+import brands from '../../mock-data/brands';
 
 import { Chip } from './filter-chips.styled';
 
