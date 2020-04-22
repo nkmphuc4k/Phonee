@@ -2,8 +2,7 @@
   "name": "phonee",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://loia5tqd001.github.io/Phonee",
-  "repository": "https://github.com/loia5tqd001/Phonee.git",
+  "homepage": "https://loia5tqd001.github.io/Phonee/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -26,16 +25,12 @@
     "styled-components": "^5.0.1",
     "styled-media-query": "^2.1.2"
   },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "node ./scripts/deploy.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
