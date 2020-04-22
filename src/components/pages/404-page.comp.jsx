@@ -2,7 +2,7 @@ import React from 'react';
 import routes from '../../utils/routes';
 import { Link } from 'react-router-dom';
 
-import { PageContainer, Heading, Para } from './404-page.styled';
+import { PageContainer, Heading } from './404-page.styled';
 
 function NotFoundPage() {
   return (
