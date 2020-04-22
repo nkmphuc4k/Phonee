@@ -11,7 +11,8 @@ import CartPage from './components/pages/cart.comp';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    // We need the basename to serve on github page correctly: https://github.com/facebook/create-react-app/issues/1765#issuecomment-285114194
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <Switch>
         <Route path={routes.home.path} render={() => <Redirect to={routes.product.path} />} exact />
