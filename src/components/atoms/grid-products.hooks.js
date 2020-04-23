@@ -34,8 +34,9 @@ export const usePagingProducts = (products, pagingSize = 20) => {
 
   const brandsFiltered = useSelector(selectBrandsFiltered);
   const priceFilter = useSelector(selectPriceFilter);
+  const sorting = useSelector(selectSorting);
 
-  useEffect(() => setCurPage(1), [brandsFiltered, priceFilter]); // reset paging when filters change
+  useEffect(() => setCurPage(1), [brandsFiltered, priceFilter, sorting]); // reset paging when filters or sorting change
 
   return {
     presentProducts,
