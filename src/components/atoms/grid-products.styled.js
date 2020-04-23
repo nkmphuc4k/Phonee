@@ -17,3 +17,26 @@ export const ViewAll = styled(Link)`
     color: currentColor;
   }
 `;
+
+export const ViewMore = styled.button`
+  margin: 2em auto;
+  padding: 1em 2em;
+  border: 1px solid ${(props) => props.theme.colors.greyLight1};
+  background: white;
+  color: ${(props) => props.theme.colors.blue};
+  font-size: ${(props) => props.theme.fw.normal};
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+
+  ion-icon {
+    margin-left: 0.3rem;
+  }
+
+  &:hover {
+    color: white;
+    background: ${(props) => props.theme.colors.blue};
+  }
+`;
