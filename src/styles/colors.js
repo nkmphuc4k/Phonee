@@ -7,10 +7,8 @@ export default {
   greyDark1: '#252a2b',
   greyDark2: '#5c5c5c',
   greyLight1: '#eeeeee',
-  greyLight2: '#9babab',
+  greyLight2: '#999',
   greyLight3: '#bfbfbf',
-
-  greyBlue1: '#f2f5fa',
 
   blue: '#288ad6',
   blueDarker1: '#90cdde',
@@ -19,4 +17,7 @@ export default {
 
   red: '#e10c00',
   redDarker1: '#c10017',
+
+  orange1: '#f59000',
+  orange2: '#fd6e1d',
 };
