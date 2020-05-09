@@ -4,11 +4,11 @@ export const ProductItem = styled.div`
   margin: 1em 0;
   display: grid;
   grid-template-columns: auto auto 1fr;
-  grid-template-rows: auto auto;
-  grid-column-gap: 1em;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1em;
   grid-template-areas:
     'image name price'
-    'image ... button';
+    'image button ...';
 `;
 
 export const ProductImage = styled.div`

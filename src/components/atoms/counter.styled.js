@@ -2,10 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   grid-area: button;
-  justify-self: end;
+  align-self: start;
 
   border: 1px solid ${(props) => props.theme.colors.greyLight4};
-  height: min-content;
   width: max-content;
   display: flex;
   border-radius: 2px;
