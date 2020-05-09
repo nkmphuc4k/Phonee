@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { ThemeProvider } from 'styled-components';
 
 import App from './app';
-import store from './redux/store';
+import { store, persistor } from './redux/store';
 
 import GlobalStyle from './styles/_global';
 import styles from './styles/theme';
@@ -18,10 +19,12 @@ import './styles/__plugins.js';
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={{ ...variables, styles, media, colors, animations, mixins }}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <PersistGate persistor={persistor}>
+      <ThemeProvider theme={{ ...variables, styles, media, colors, animations, mixins }}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </PersistGate>
   </Provider>,
   document.getElementById('root'),
 );
