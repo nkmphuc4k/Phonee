@@ -21,12 +21,12 @@ function CartItem({ product, amount }) {
   return (
     <ProductItem>
       <ProductImage>
-        <ImageFrame>
-          <img src={product.image} alt={product.name} />
-        </ImageFrame>
         <RemoveItem onClick={() => dispatch(removeProduct(product))}>
           <ion-icon name="close-circle-outline" /> Xóa
         </RemoveItem>
+        <ImageFrame>
+          <img src={product.image} alt={product.name} />
+        </ImageFrame>
       </ProductImage>
       <ProductName>{product.name}</ProductName>
       <ProductPrice>{formatVnd(product.price)}</ProductPrice>

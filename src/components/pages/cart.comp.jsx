@@ -14,6 +14,8 @@ import {
   Total,
   PayButton,
   MarginAuto,
+  EmptyCartContainer,
+  ToHomeLink,
 } from './cart.styled';
 
 function Cart() {
@@ -30,20 +32,27 @@ function Cart() {
         <p>Giỏ hàng của bạn</p>
       </PageHeader>
 
-      <CartContainer>
-        <CartProducts>
-          {cartItems.map(({ product, amount }) => (
-            <CartItem key={product.id} product={product} amount={amount} />
-          ))}
+      {cartItems.length > 0 ? (
+        <CartContainer>
+          <CartProducts>
+            {cartItems.map(({ product, amount }) => (
+              <CartItem key={product.id} product={product} amount={amount} />
+            ))}
 
-          <Total>
-            Tổng tiền: <span>{formatVnd(totalMoney)}</span>
-          </Total>
-        </CartProducts>
+            <Total>
+              Tổng tiền: <span>{formatVnd(totalMoney)}</span>
+            </Total>
+          </CartProducts>
 
-        <PayButton to={routes.home.path}>Đặt hàng</PayButton>
-        <MarginAuto>Bạn có thể chọn hình thức thanh toán sau khi đặt hàng</MarginAuto>
-      </CartContainer>
+          <PayButton to={routes.home.path}>Đặt hàng</PayButton>
+          <MarginAuto>Bạn có thể chọn hình thức thanh toán sau khi đặt hàng</MarginAuto>
+        </CartContainer>
+      ) : (
+        <EmptyCartContainer>
+          Không có sản phầm nào trong giỏ hàng
+          <ToHomeLink to={routes.home.path}>Về trang chủ</ToHomeLink>
+        </EmptyCartContainer>
+      )}
     </PageContainer>
   );
 }

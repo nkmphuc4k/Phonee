@@ -25,6 +25,7 @@ export const ImageFrame = styled.div`
   width: 15rem;
   height: 15rem;
   ${(props) => props.theme.mixins.imageFrame}
+  transition: 0.2s;
 `;
 
 export const RemoveItem = styled.span`
@@ -32,9 +33,19 @@ export const RemoveItem = styled.span`
   align-items: center;
   cursor: pointer;
   margin: 0.5rem auto;
+  order: 1;
 
   ion-icon {
     margin-right: 0.5rem;
+  }
+
+  &:hover {
+    font-weight: ${(props) => props.theme.fw.normal};
+
+    + ${ImageFrame} {
+      transform: translateY(-0.5rem);
+      opacity: 0.8;
+    }
   }
 `;
 

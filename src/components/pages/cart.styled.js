@@ -70,3 +70,19 @@ export const MarginAuto = styled.p`
   margin: auto;
   text-align: center;
 `;
+
+export const EmptyCartContainer = styled(CartContainer)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ToHomeLink = styled(Link)`
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  padding: 1rem 5em;
+  margin-top: 1em;
+  font-weight: ${(props) => props.theme.fw.semiBold};
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.blue};
+`;

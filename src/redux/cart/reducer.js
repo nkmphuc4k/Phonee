@@ -1,18 +1,8 @@
 import types from './types';
 import { addProductToCart, removeProductFromCart, Takeout1ProductFromCart } from './utils';
-import products from '../../mock-data/products';
 
 const initialState = {
-  items: [
-    {
-      product: products[0],
-      amount: 2,
-    },
-    {
-      product: products[1],
-      amount: 1,
-    },
-  ],
+  items: [],
 };
 
 export default (state = initialState, { type, payload }) => {
