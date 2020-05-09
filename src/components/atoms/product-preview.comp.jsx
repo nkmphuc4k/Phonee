@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { productProps } from '../../utils/prop-types';
 import routes from '../../utils/routes';
 import { formatVnd } from '../../utils/helpers';
 
@@ -27,20 +27,6 @@ function ProductPreview({ id, name, price, crossPrice, image }) {
   );
 }
 
-ProductPreview.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  crossPrice: PropTypes.number,
-  image: PropTypes.string.isRequired,
-};
-
-ProductPreview.defaultProps = {
-  id: 'product_1',
-  name: 'iPhone 11 Pro 256GB',
-  price: 34990000,
-  crossPrice: 36990000,
-  image: 'https://cdn.tgdd.vn/Products/Images/42/210655/iphone-11-pro-256gb-black-400x400.jpg',
-};
+ProductPreview.propTypes = productProps;
 
 export default ProductPreview;

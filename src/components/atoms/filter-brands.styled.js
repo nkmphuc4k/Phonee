@@ -12,6 +12,7 @@ export const ImageContainer = styled.div`
   cursor: pointer;
   position: relative;
   margin: -1px -1px 0 0;
+  min-height: 4rem;
 
   img {
     /* prevent dragging ghost image: https://stackoverflow.com/a/48828721/9787887 */

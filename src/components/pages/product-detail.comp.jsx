@@ -55,7 +55,7 @@ function ProductDetail() {
           <SpecHeading>Thông số kỹ thuật</SpecHeading>
           <SpecList>
             {productSpec.map((spec) => (
-              <SpecItem>
+              <SpecItem key={spec.name}>
                 <SpecName>{spec.name}: </SpecName>
                 <span>{spec.value}</span>
               </SpecItem>
