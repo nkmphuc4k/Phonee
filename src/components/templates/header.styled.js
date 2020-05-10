@@ -23,7 +23,6 @@ export const Logo = styled(Link)`
 export const Form = styled.form`
   display: flex;
   align-items: center;
-  overflow: hidden;
   position: relative;
 `;
 
