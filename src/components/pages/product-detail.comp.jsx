@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import products from '../../mock-data/products';
 import { formatVnd } from '../../utils/helpers';
 import routes from '../../utils/routes';
@@ -27,6 +27,12 @@ function ProductDetail() {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const product = products.find((x) => x.id === productId);
+
+  const history = useHistory();
+  if (!product) {
+    history.push(''); // navigate to products page when there's no product found
+    return null;
+  }
 
   return (
     <PageContainer>
