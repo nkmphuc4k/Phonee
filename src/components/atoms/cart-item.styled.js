@@ -22,8 +22,9 @@ export const ProductImage = styled.div`
 `;
 
 export const ImageFrame = styled.div`
-  width: 15rem;
-  height: 15rem;
+  --size: ${(props) => (props.fixed ? '10rem' : '15rem')};
+  width: var(--size);
+  height: var(--size);
   ${(props) => props.theme.mixins.imageFrame}
   transition: 0.2s;
 `;

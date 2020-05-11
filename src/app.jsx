@@ -10,6 +10,7 @@ import NotFoundPage from './components/pages/404-page.comp';
 import ProductPage from './components/pages/product.comp';
 import ProductDetailPage from './components/pages/product-detail.comp';
 import CartPage from './components/pages/cart.comp';
+import CheckoutPage from './components/pages/checkout.comp';
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         - https://reacttraining.com/react-router/web/guides/scroll-restoration 
         - https://github.com/NearHuscarl/nearacademy/blob/d89bfa98b308b91e0ef50ebf69e722ce73bf6e82/src/AppRouter.jsx#L60
       */}
-      <Route component={ScrollToTop} />
+      <ScrollToTop />
       <Header />
       <ScrollToTopIndicator />
       <Switch>
@@ -27,6 +28,7 @@ export default function App() {
         <Route path={routes.product.path} component={ProductPage} exact />
         <Route path={`${routes.product.path}/:productId`} component={ProductDetailPage} exact />
         <Route path={routes.cart.path} component={CartPage} exact />
+        <Route path={routes.checkout.path} component={CheckoutPage} exact />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

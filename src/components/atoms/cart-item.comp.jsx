@@ -15,27 +15,39 @@ import {
   ImageFrame,
 } from './cart-item.styled';
 
-function CartItem({ product, amount }) {
+function CartItem({ product, amount, fixed }) {
   const dispatch = useDispatch();
 
   return (
     <ProductItem>
       <ProductImage>
-        <RemoveItem onClick={() => dispatch(removeProduct(product))}>
-          <ion-icon name="close-circle-outline" /> Xóa
-        </RemoveItem>
-        <ImageFrame>
+        {!fixed && (
+          <RemoveItem onClick={() => dispatch(removeProduct(product))}>
+            <ion-icon name="close-circle-outline" /> Xóa
+          </RemoveItem>
+        )}
+
+        <ImageFrame fixed={fixed}>
           <img src={product.image} alt={product.name} />
         </ImageFrame>
       </ProductImage>
+
       <ProductName>{product.name}</ProductName>
+
       <ProductPrice>{formatVnd(product.price)}</ProductPrice>
-      <Counter
-        value={amount}
-        min={1}
-        onIncrement={() => dispatch(addProduct(product))}
-        onDecrement={() => dispatch(takeout1Product(product))}
-      />
+
+      {fixed ? (
+        <p>
+          Số lượng: <b>{amount}</b>
+        </p>
+      ) : (
+        <Counter
+          value={amount}
+          min={1}
+          onIncrement={() => dispatch(addProduct(product))}
+          onDecrement={() => dispatch(takeout1Product(product))}
+        />
+      )}
     </ProductItem>
   );
 }
@@ -43,6 +55,11 @@ function CartItem({ product, amount }) {
 CartItem.propTypes = {
   amount: PropTypes.number.isRequired,
   product: PropTypes.shape(productProps),
+  fixed: PropTypes.bool.isRequired,
+};
+
+CartItem.defaultProps = {
+  fixed: false,
 };
 
 export default CartItem;
