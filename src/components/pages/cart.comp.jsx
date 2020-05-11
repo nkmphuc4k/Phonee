@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectItems, selectTotalMoney } from '../../redux/cart/selectors';
 
 import CartItem from '../atoms/cart-item.comp';
+import FormGuestCart from '../atoms/form-guest-cart.comp';
 import {
   PageContainer,
   PageHeader,
@@ -44,7 +45,9 @@ function Cart() {
             </Total>
           </CartProducts>
 
-          <PayButton to={routes.home.path}>Đặt hàng</PayButton>
+          <FormGuestCart />
+
+          <PayButton to={routes.checkout.path}>Đặt hàng</PayButton>
           <MarginAuto>Bạn có thể chọn hình thức thanh toán sau khi đặt hàng</MarginAuto>
         </CartContainer>
       ) : (

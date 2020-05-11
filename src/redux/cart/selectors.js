@@ -4,7 +4,7 @@ const selectCart = (state) => state.cart;
 
 export const selectItems = createSelector(
   [selectCart], 
-  (cart) => cart.items
+  (cart) => cart.items,
 );
 
 export const selectAmountProduct = createSelector(
@@ -22,4 +22,9 @@ export const selectTotalMoney = createSelector(
       (acc, cur) => acc + cur.amount * cur.product.price, 
     0),
 );
+
+export const selectGuest = createSelector(
+  [selectCart],
+  (cart) => cart.guest,
+)
 

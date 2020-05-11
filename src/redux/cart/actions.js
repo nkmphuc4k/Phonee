@@ -18,3 +18,8 @@ export const takeout1Product = (payload) => ({
 export const emptyCart = () => ({
   type: types.EMPTY_CART,
 });
+
+export const submitGuest = (payload) => ({
+  type: types.SUBMIT_GUEST,
+  payload,
+});

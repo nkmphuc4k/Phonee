@@ -11,4 +11,8 @@ export default {
     path: '/cart',
     display: 'Giỏ hàng',
   },
+  checkout: {
+    path: '/checkout',
+    display: 'Thanh toán',
+  },
 };

@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <HeaderContainer>
-      <Logo to={routes.home.path}>Phonee</Logo>
+      <Logo to={routes.home.path} title="Trang chủ">Phonee</Logo>
 
       <Form>
         <SearchInput
@@ -30,7 +30,7 @@ function Header() {
         <SearchSuggestion searchKey={searchKey} clearTextCb={clearTextCb} />
       </Form>
 
-      <CartIcon to={routes.cart.path}>
+      <CartIcon to={routes.cart.path} title="Giỏ hàng">
         <ion-icon name="cart" />
         <span>({amountProducts})</span>
       </CartIcon>

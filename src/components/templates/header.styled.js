@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const HeaderContainer = styled.header`
   max-width: 120rem;
   margin: 0 auto 2em;
-  padding: 0.2em 1.3em;
+  padding: 0.2em 3em;
   background: ${(props) => props.theme.colors.blueDarker2};
   color: ${(props) => props.theme.colors.white};
   display: flex;
@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled(Link)`
   font-size: 2.5em;
-  margin-right: 1em;
+  margin-right: 1.5em;
   display: inline-block;
   color: ${(props) => props.theme.colors.white};
   font-weight: ${(props) => props.theme.fw.bold};

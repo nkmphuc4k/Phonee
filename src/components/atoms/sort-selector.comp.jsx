@@ -8,7 +8,7 @@ import { setSorting } from '../../redux/product-filter-sorting/actions';
 
 import { selectCustomStyles } from './sort-selector.styled';
 
-function ProductDropdown() {
+function SortSelector() {
   const selectedSorting = useSelector(selectSorting);
   const dispatch = useDispatch();
 
@@ -22,4 +22,4 @@ function ProductDropdown() {
     />
   );
 }
-export default ProductDropdown;
+export default SortSelector;
