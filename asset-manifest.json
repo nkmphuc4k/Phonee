@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/Phonee/static/js/main.dae10ccc.chunk.js",
+    "main.js.map": "/Phonee/static/js/main.dae10ccc.chunk.js.map",
+    "runtime-main.js": "/Phonee/static/js/runtime-main.f89ca281.js",
+    "runtime-main.js.map": "/Phonee/static/js/runtime-main.f89ca281.js.map",
+    "static/css/2.764ccc25.chunk.css": "/Phonee/static/css/2.764ccc25.chunk.css",
+    "static/js/2.83dbe8fb.chunk.js": "/Phonee/static/js/2.83dbe8fb.chunk.js",
+    "static/js/2.83dbe8fb.chunk.js.map": "/Phonee/static/js/2.83dbe8fb.chunk.js.map",
+    "index.html": "/Phonee/index.html",
+    "precache-manifest.37f08d9cc5bc4a5a4de9bc3b61b44177.js": "/Phonee/precache-manifest.37f08d9cc5bc4a5a4de9bc3b61b44177.js",
+    "service-worker.js": "/Phonee/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/Phonee/static/css/2.764ccc25.chunk.css.map",
+    "static/js/2.83dbe8fb.chunk.js.LICENSE.txt": "/Phonee/static/js/2.83dbe8fb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f89ca281.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.83dbe8fb.chunk.js",
+    "static/js/main.dae10ccc.chunk.js"
+  ]
+}
